@@ -1,0 +1,14 @@
+<p>Here are the places you want to visit</p>
+
+<ul>
+  <% @places.each() do |place| %>
+  <li><% place.location() %></li>
+  <% end %>
+</ul>
+
+<form action="/places" method="post">
+  <label for="places">Locations to Visit.</label>
+  <input type="text" name="places">
+
+  <button class="btn-success">Click me!</button>
+</form>
