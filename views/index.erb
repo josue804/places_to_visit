@@ -2,13 +2,18 @@
 
 <ul>
   <% @places.each() do |place| %>
-  <li><% place.location() %></li>
+  <li><%= place.location() %></li>
   <% end %>
 </ul>
 
-<form action="/places" method="post">
-  <label for="places">Locations to Visit.</label>
-  <input type="text" name="places">
+<p>Add a location: </p>
+<form action="/results" method="post">
+  <label for="location">Location</label>
+  <input type="text" id="location" name="location">
 
   <button class="btn-success">Click me!</button>
+</form>
+
+<form action="/clear" method="post">
+  <button class="btn-danger">Delete List! D:</button>
 </form>
