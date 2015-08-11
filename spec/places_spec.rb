@@ -17,7 +17,7 @@ describe(Places) do
     it('saves locations to index page') do
       places = Places.new('New York')
       places.save()
-      expect(Places.all()).to(eq(['New York']))
+      expect(Places.all()).to(eq([places]))
     end
   end
 
