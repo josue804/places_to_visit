@@ -8,9 +8,14 @@ get('/') do
   erb(:index)
 end
 
-post('/places') do
+post('/results') do
   location = params.fetch('location')
   place = Places.new(location)
   place.save()
   erb(:results)
+end
+
+post('/clear') do
+  Places.clear()
+  erb(:clear)
 end
